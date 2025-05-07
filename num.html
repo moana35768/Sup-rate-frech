@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Números</title>
+</head>
+<body>
+  <h1>Ordenar Números de menor a Mayor<h1>
+
+    <script>
+    //Crear un array vacío para almacenar los Números
+    let numeros = [];
+
+    // Pedir al usuario que ingrese 5 Números
+    for (let i = 0; i < 5; i ++) {
+      let numero = parseInt(prompt("Ingresa el número" ${i + 1} + ":" ));
+      // Verificar si el valor es un número válido
+      if(!isNan(numero)) {
+        numeros.push(numero);
+      } else {
+        alert("Por favor, ingresa un número válido.");
+        i--; //Decrementar para repetir la entrada
+      }
+    }
+
+    //Ordenar el array de menor a mayor
+    numeros.sort((a, b) => a - b);
+
+    //Mostrar el resultado en la consola
+    console.log("Números ordenados de menor a mayor:", numeros);
+    alert("Números ordenados de menor a mayor: " + numeros.join(","));
+    </script>
+</body>
+</html>
